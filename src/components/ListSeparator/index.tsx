@@ -1,10 +1,12 @@
 import React from 'react';
-import { View } from 'react-native';
+import { View, ViewProps } from 'react-native';
 
 import { styles } from './styles';
 
-export function ListSeparator() {
+type ListSeparatorProps = ViewProps;
+
+export function ListSeparator({ style, ...rest }: ListSeparatorProps) {
   return (
-    <View style={styles.container} />
+    <View style={[styles.container, style]} {...rest} />
   )
 }
