@@ -7,11 +7,13 @@ import { styles } from './styles';
 type CategorySelectProps = {
   selectedCategory: string;
   setSelectedCategory: (categoryId: string) => void;
+  hasCheck?: boolean
 }
 
 export function CategorySelect({
   selectedCategory,
-  setSelectedCategory
+  setSelectedCategory,
+  hasCheck = false
 }: CategorySelectProps) {
   return (
     <ScrollView
@@ -26,6 +28,7 @@ export function CategorySelect({
           title={category.title}
           icon={category.icon}
           isChecked={category.id == selectedCategory}
+          hasCheck={hasCheck}
           onPress={() => setSelectedCategory(category.id)}
         />
       ))}
