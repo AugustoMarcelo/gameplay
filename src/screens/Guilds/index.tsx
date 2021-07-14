@@ -39,6 +39,7 @@ export function Guilds({ handleSelectGuild }: GuildsProps) {
           />
         )}
         showsVerticalScrollIndicator={false}
+        contentContainerStyle={{ paddingBottom: 68 }}
         ItemSeparatorComponent={() => 
           <ListSeparator style={styles.customListSeparator} />
         }
