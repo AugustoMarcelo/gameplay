@@ -18,8 +18,13 @@ export function Button({
   enabled,
   ...rest
 }: ButtonProps) {
+  console.log(enabled)
   return (
-    <RectButton style={[styles.container, !enabled && styles.disabled, style]} {...rest}>
+    <RectButton style={[
+      styles.container, enabled === false && styles.disabled,
+      style
+    ]} {...rest}
+    >
       {bordered
         ? (
           <View style={[styles.border]}>
