@@ -3,7 +3,9 @@ import {
   View,
   Modal,
   ModalProps,
-  TouchableWithoutFeedback
+  TouchableWithoutFeedback,
+  StyleProp,
+  ViewStyle
 } from 'react-native';
 import { Background } from '../Background';
 import { styles } from './styles';
@@ -11,9 +13,17 @@ import { styles } from './styles';
 type ModalViewProps = ModalProps & {
   children: ReactNode;
   closeModal: () => void;
+  showBar?: boolean;
+  containerStyle?: StyleProp<ViewStyle>
 }
 
-export function ModalView({ children, closeModal, ...rest }: ModalViewProps) {
+export function ModalView({
+  children,
+  showBar = true,
+  containerStyle,
+  closeModal,
+  ...rest
+}: ModalViewProps) {
   return (
     <Modal
       transparent
@@ -23,9 +33,9 @@ export function ModalView({ children, closeModal, ...rest }: ModalViewProps) {
     >
       <TouchableWithoutFeedback onPress={closeModal}>
         <View style={styles.overlay}>
-          <View style={styles.container}>
+          <View style={containerStyle ? containerStyle :  styles.container}>
             <Background>
-              <View style={styles.bar} />
+              {showBar && <View style={styles.bar} />}
               {children}
             </Background>
           </View>
