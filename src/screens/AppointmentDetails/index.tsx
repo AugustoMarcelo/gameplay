@@ -101,6 +101,13 @@ export function AppointmentDetails() {
               style={styles.members}
               data={guildWidget.members}
               keyExtractor={item => item.id}
+              ListEmptyComponent={() => (
+                <View style={styles.emptyContainer}>
+                  <Text style={styles.emptyText}>
+                    Nenhum jogadaor encontrado :(
+                  </Text>
+                </View>
+              )}
               renderItem={({ item }) => (
                 <Member data={item} />
               )}
