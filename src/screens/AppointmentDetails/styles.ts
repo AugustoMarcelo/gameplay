@@ -31,6 +31,14 @@ export const styles = StyleSheet.create({
     marginLeft: 24,
     marginTop: 27,
   },
+  emptyContainer: {
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  emptyText: {
+    fontFamily: theme.fonts.title500,
+    color: theme.colors.heading,
+  },
   customListSeparator: {
     width: '79%',
     marginTop: 12,
