@@ -38,7 +38,7 @@ This project was developed with the following technologies:
   - [react-native-svg](https://github.com/react-native-svg/react-native-svg) to import SVG files and use them as components;
   - [expo-app-loading](https://docs.expo.io/versions/latest/sdk/app-loading/) to keep SplashScreen visible while the assets are loaded
   - [react-native-iphone-x-helper](https://github.com/ptelad/react-native-iphone-x-helper) to help with iPhone screen details;
-  - [axios](https://axios-http.com/) para fazer solicitações à API Discord;
+  - [axios](https://axios-http.com/) to make requests to Discord API 
   - and more...
 
 ---
