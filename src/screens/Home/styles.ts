@@ -14,5 +14,11 @@ export const styles = StyleSheet.create({
   matchesList: {
     marginTop: 24,
     marginLeft: 24,
+  },
+  customModalView: {
+    height: 170,
+    marginTop: 'auto',
+    alignItems: 'center',
+    justifyContent: 'center',
   }
 })
