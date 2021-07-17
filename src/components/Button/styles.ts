@@ -10,6 +10,15 @@ export const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
   },
+  border: {
+    width: '100%',
+    height: 56,
+    flexDirection: 'row',
+    alignItems: 'center',
+    borderWidth: 1,
+    borderColor: theme.colors.secondary30,
+    borderRadius: 8,
+  },
   title: {
     flex: 1,
     fontSize: 15,
@@ -28,5 +37,8 @@ export const styles = StyleSheet.create({
   icon: {
     width: 24,
     height: 18,
+  },
+  disabled: {
+    opacity: 0.5
   }
 });

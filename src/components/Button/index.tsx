@@ -1,19 +1,35 @@
 import React from 'react';
 import { RectButton, RectButtonProps } from 'react-native-gesture-handler';
 import {
-  Text,
+  Text, View
 } from 'react-native';
 
 import { styles } from './styles';
 
 type ButtonProps = RectButtonProps & {
   title: string;
+  bordered?: boolean;
 }
 
-export function Button({ title, ...rest }: ButtonProps) {
+export function Button({
+  title,
+  bordered = false,
+  style,
+  enabled,
+  ...rest
+}: ButtonProps) {
   return (
-    <RectButton style={styles.container} {...rest}>
-      <Text style={styles.title}>{title}</Text>
+    <RectButton style={[styles.container, !enabled && styles.disabled, style]} {...rest}>
+      {bordered
+        ? (
+          <View style={[styles.border]}>
+            <Text style={styles.title}>{title}</Text>
+          </View>
+        ) : (
+          <Text style={styles.title}>{title}</Text>
+        )
+      }
+
     </RectButton>
   )
 }
