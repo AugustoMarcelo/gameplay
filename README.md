@@ -36,7 +36,7 @@ This project was developed with the following technologies:
   - [expo-linear-gradient](https://docs.expo.io/versions/latest/sdk/linear-gradient/) to create gradient effects in components;
   - [expo-auth-session](https://docs.expo.io/versions/latest/sdk/auth-session/) to connect with Discord API by using OAuth2;
   - [react-native-svg](https://github.com/react-native-svg/react-native-svg) to import SVG files and use them as components;
-  - [expo-app-loading](https://docs.expo.io/versions/latest/sdk/app-loading/) to keep SplashScreen visible white the assets are loaded
+  - [expo-app-loading](https://docs.expo.io/versions/latest/sdk/app-loading/) to keep SplashScreen visible while the assets are loaded
   - [react-native-iphone-x-helper](https://github.com/ptelad/react-native-iphone-x-helper) to help with iPhone screen details;
   - [axios](https://axios-http.com/) para fazer solicitações à API Discord;
   - and more...
